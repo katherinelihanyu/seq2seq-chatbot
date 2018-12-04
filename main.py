@@ -34,10 +34,6 @@ def train(data_corpus, batch_size, num_epochs, learning_rate, inference_mode):
 
     metadata, trainX, trainY, testX, testY, validX, validY = initial_setup(data_corpus)
 
-    trainX = [x[::-1] for x in trainX]
-    testX = [x[::-1] for x in testX]
-    validX = [x[::-1] for x in validX]
-
     # Parameters
     src_len = len(trainX)
     tgt_len = len(trainY)
