@@ -145,8 +145,20 @@ def train(data_corpus, batch_size, num_epochs, learning_rate, inference_mode):
             sentence = inference(input_seq)
             print(" >", ' '.join(sentence))
     else:
-        seeds = ["happy birthday have a nice day",
-                 "donald trump won last nights presidential debate according to snap online polls"]
+        seeds = [
+                "happy birthday have a nice day",
+                "donald trump won last nights presidential debate according to snap online polls",
+                "my name is david. what is my name?",
+                "my name is john. what is my name?",
+                "are you a leader or a follower?",
+                "are you a follower or a leader?",
+                "what is moral?",
+                "what is immoral?",
+                "what is morality?",
+                "what is the definition of altruism?",
+                "ok ... so what is the definition of morality?",
+                "tell me the definition of morality , i am quite upset now!"
+                ]
         for epoch in range(num_epochs):
             trainX, trainY = shuffle(trainX, trainY, random_state=0)
             total_loss, n_iter = 0, 0
